@@ -1,0 +1,12 @@
+language: java
+jdk:
+- oraclejdk8
+branches:
+  only:
+  - master
+  - marked
+install:
+- mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V --settings settings.xml
+script:
+- mvn clean test --settings settings.xml
+
